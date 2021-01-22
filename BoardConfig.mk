@@ -28,7 +28,14 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a73
 
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+TARGET_COMPILE_WITH_MSM_KERNEL := true
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_SOURCE := kernel/google/wahoo
+TARGET_NEEDS_DTBOIMAGE := true
+
 BOARD_KERNEL_CMDLINE += androidboot.hardware=$(TARGET_BOOTLOADER_BOARD_NAME) androidboot.console=ttyMSM0 lpm_levels.sleep_disabled=1
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_CMDLINE += user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3
 BOARD_KERNEL_CMDLINE += service_locator.enable=1
 BOARD_KERNEL_CMDLINE += swiotlb=2048
@@ -51,7 +58,7 @@ endif
 
 TARGET_NO_BOOTLOADER ?= true
 TARGET_NO_KERNEL := false
-TARGET_NO_RECOVERY := true
+TARGET_NO_RECOVERY := false
 BOARD_USES_RECOVERY_AS_BOOT := true
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
@@ -92,6 +99,9 @@ QCOM_BOARD_PLATFORMS += msm8998
 BOARD_HAVE_BLUETOOTH_QCOM := true
 BOARD_USES_SDM845_BLUETOOTH_HAL := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/google/wahoo/bluetooth
+
+# Audio
+BOARD_SUPPORTS_SOUND_TRIGGER := true
 
 # Camera
 TARGET_USES_AOSP := true
@@ -186,6 +196,9 @@ TW_USE_TOOLBOX := true
 BOARD_VNDK_RUNTIME_DISABLE := true
 TW_INCLUDE_REPACKTOOLS := true
 TW_DELAY_TOUCH_INIT_MS := 1000
+
+# Data
+PLATFORM_SECURITY_PATCH := 2099-12-31
 
 # SHRP Feature
 SHRP_MAINTAINER := ReallySnow
