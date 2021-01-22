@@ -182,11 +182,6 @@ TW_INCLUDE_CRYPTO := true
 AB_OTA_UPDATER := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TARGET_RECOVERY_FSTAB := device/google/wahoo/recovery.fstab
-#TW_RECOVERY_ADDITIONAL_RELINK_FILES := $(OUT)/system/lib64/libhardware_legacy.so
-#TARGET_RECOVERY_DEVICE_MODULES += android.hardware.boot@1.0
-#TARGET_RECOVERY_DEVICE_MODULES += android.hardware.confirmationui@1.0
-#TW_RECOVERY_ADDITIONAL_RELINK_FILES := out/target/product/$(PRODUCT_HARDWARE)/system/lib64/android.hardware.boot@1.0.so
-#TW_RECOVERY_ADDITIONAL_RELINK_FILES += out/target/product/$(PRODUCT_HARDWARE)/system/lib64/android.hardware.confirmationui@1.0.so
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 # MTP will not work until we update it to support ffs
@@ -201,6 +196,9 @@ TW_EXTRA_LANGUAGES := true
 
 # Data
 PLATFORM_SECURITY_PATCH := 2099-12-31
+
+# CPU
+TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone7/temp
 
 # SHRP Feature
 SHRP_MAINTAINER := ReallySnow
