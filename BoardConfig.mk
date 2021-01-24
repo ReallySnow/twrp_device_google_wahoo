@@ -195,6 +195,10 @@ TW_EXTRA_LANGUAGES := true
 # Data
 PLATFORM_SECURITY_PATCH := 2099-12-31
 
+# Flash
+USE_RECOVERY_INSTALLER := true
+RECOVERY_INSTALLER_PATH := device/google/wahoo/installer
+
 # CPU
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone7/temp
 
@@ -204,7 +208,7 @@ SHRP_REC_TYPE := Treble
 SHRP_DEVICE_TYPE := A/B
 SHRP_EDL_MODE := 1
 SHRP_DARK := true
-SHRP_FLASH := 1
-SHRP_AB := 1
+SHRP_FLASH := 0
+SHRP_AB := true
 SHRP_INTERNAL：= /sdcard
 SHRP_EXPRESS := true
