@@ -670,10 +670,12 @@ ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
   PRODUCT_PROPERTY_OVERRIDES += \
       persist.vendor.usb.usbradio.config=diag
 endif
+# MTP
+PRODUCT_COPY_FILES += \
+    device/google/wahoo/init.recovery.usb.rc:root/init.recovery.usb.rc
 
 # TWRP
 PRODUCT_COPY_FILES += \
-    device/google/wahoo/recovery/root/init/init.recovery.usb.rc:root/init.recovery.usb.rc \
     device/google/wahoo/fstab.hardware:recovery/root/fstab.$(PRODUCT_HARDWARE) \
     device/google/wahoo/recovery/root/sbin/ese_load:recovery/root/sbin/ese_load \
     device/google/wahoo/recovery/root/system/etc/event-log-tags:recovery/root/event-log-tags \
