@@ -32,8 +32,8 @@ extract() {
 }
 
 print "########################################"
-print "#   TWRP installer for Xiaomi Mi A3    #"
-print "#          by Nikesh Kataria           #"
+print "#    TWRP installer for Pixel 2 XL     #"
+print "#             by ReallySnow            #"
 print "########################################"
 print
 
