@@ -26,10 +26,11 @@
 #
 
 on property:hwservicemanager.ready=true
-    setprop sys.usb.config adb
+    setprop sys.usb.config adb,mtp
 
 on boot
-    setprop sys.usb.config adb
+    setprop sys.usb.config adb,mtp
+    setprop sys.usb.configfs 1
 
 on property:ro.boot.usbcontroller=*
     setprop sys.usb.controller ${ro.boot.usbcontroller}
