@@ -41,7 +41,6 @@ BOARD_KERNEL_CMDLINE += swiotlb=2048
 BOARD_KERNEL_CMDLINE += firmware_class.path=/vendor/firmware
 BOARD_KERNEL_CMDLINE += loop.max_part=7
 BOARD_KERNEL_CMDLINE += raid=noautodetect
-BOARD_KERNEL_CMDLINE += usbcore.autosuspend=7
 
 BOARD_KERNEL_BASE        := 0x00000000
 BOARD_KERNEL_PAGESIZE    := 4096
@@ -57,7 +56,7 @@ endif
 
 TARGET_NO_BOOTLOADER ?= true
 TARGET_NO_KERNEL := false
-TARGET_NO_RECOVERY := true
+TARGET_NO_RECOVERY := false
 BOARD_USES_RECOVERY_AS_BOOT := true
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
@@ -191,3 +190,16 @@ TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone7/temp
 TW_HAS_EDL_MODE := true
 BOARD_HAS_NO_REAL_SDCARD := true
 RECOVERY_SDCARD_ON_DATA := true
+TW_USE_QCOM_HAPTICS_VIBRATOR := true
+
+# Shrp 
+SHRP_DEVICE_CODE := taimen
+SHRP_MAINTAINER := ReallySnow
+SHRP_REC := /dev/block/bootdevice/by-name/recovery
+SHRP_REC_TYPE := Treble
+SHRP_DEVICE_TYPE := A/B
+SHRP_EDL_MODE := 1
+SHRP_FLASH := 1
+SHRP_AB := true
+SHRP_INTERNAL：= /sdcard
+SHRP_EXPRESS := true
