@@ -717,6 +717,8 @@ PRODUCT_COPY_FILES += \
     device/google/wahoo/recovery/root/sbin/android.hardware.confirmationui@1.0.so:recovery/root/sbin/android.hardware.confirmationui@1.0.so \
     device/google/wahoo/recovery/root/sbin/libp61-jcop-kit.so:recovery/root/sbin/libp61-jcop-kit.so \
     device/google/wahoo/recovery/root/sbin/libese-app-boot.so:recovery/root/sbin/libese-app-boot.so \
+    device/google/wahoo/recovery/root/sbin/load_modules.sh:recovery/root/sbin/load_modules.sh \
+    device/google/wahoo/recovery/root/sbin/drv2624.ko:recovery/root/sbin/drv2624.ko \
     device/google/wahoo/recovery/root/sbin/libese-app-weaver.so:recovery/root/sbin/libese-app-weaver.so \
     device/google/wahoo/recovery/root/sbin/libese_cpp_nxp_pn80t_nq_nci.so:recovery/root/sbin/libese_cpp_nxp_pn80t_nq_nci.so \
     device/google/wahoo/recovery/root/sbin/libese-hw-nxp-pn80t-nq-nci.so:recovery/root/sbin/libese-hw-nxp-pn80t-nq-nci.so \
